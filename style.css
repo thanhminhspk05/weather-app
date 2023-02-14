@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #ccc;
+    font-family: 'Poppins', sans-serif;
+    background-image: url('https://source.unsplash.com/1600x900/?landscape');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.search-bar {
+    font-size: 20px;
+    border-radius: 30px;
+    width: 80%;
+    max-width: 300px;
+    margin: 20px;
+    padding: 10px 20px;
+}
+
+.btn-search {
+    font-size: 40px;
+    margin-top: 25px;
+}
+
+
+.card {
+    background-color: #111;
+    padding: 1em;
+    width: 60%;
+    height: 80%;
+    border-radius: 30px; 
+    opacity: 0.8;
+    color: #fff;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+}
+
+
+.city {
+    text-align: center;
+}
+
+.current .temp {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.current .degree {
+    font-size: 80px;
+    text-align: center;
+}
+
+.current .condition {
+    text-align: center;
+    font-size: 30px;
+}
+
+.current .local_time {
+    text-align: center;
+}
+
+.current .sub-info {
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    margin: 30px auto;
+}
+
+.current .sub-info span {
+    margin-left: 50px;
+}
+
+.forecast {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.forecast .day {
+    width: calc(100%/6);
+    border-radius: 5px;
+}
+
+.forecast .day:hover {
+    background-color: #696969;
+}
+
+.forecast .day img {
+    margin: 0 auto;
+}
+
+.max_temp {
+    font-size: 30px;
+    margin-right: 5px;
+}
+
+
+@media only screen and (max-width: 800px) {
+    .day_5 {
+        display: none;
+    }
+
+    .forecast .day {
+        width: calc(100%/5);
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .current .temp img {
+        display: none;
+    }
+
+    .search-bar {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .day_4 {
+        display: none;
+    }
+
+    .forecast .day {
+        width: calc(100%/4);
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .sub-info span {
+        margin-left: 20px !important;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .max_temp {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .card {
+        width: 75%;
+        height: 85%;
+    }
+    .degree {
+        font-size: 50px !important;
+    }
+
+    .city, .current .condition {
+        font-size: 20px !important;
+    }
+
+    .sub-info {
+        width: unset !important;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .day_3 {
+        display: none;
+    }
+
+    .forecast .day {
+        width: calc(100%/2);
+    }
+
+    .local_time {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .search-bar {
+        padding: 5px 10px;
+        margin: 15px;
+        font-size: 15px;
+    }
+
+    .current .condition {
+        font-size: 20px !important;
+    }
+
+    .forecast .day {
+        width: calc(100%/2 - 1em) !important;
+        flex-wrap: wrap;
+    }
+
+    .forecast .condition {
+        font-size: 16px !important;
+    }
+
+    .btn-search {
+        font-size: 25px;
+        margin-top: 16px;
+    }
+
+    .city {
+        font-size: 20px !important;
+    }
+
+    .degree {
+        font-size: 60px !important;
+        margin-top: 60px !important;
+    }
+
+    .condition {
+        font-size: 16px !important;
+    }
+
+    .sub-info {
+        margin: 15px auto !important;
+    }
+
+    .forecast {
+        flex-wrap: wrap;
+        gap: 1em;
+    }
+
+    .day_3 {
+        display: block;
+    }
+
+    .day_4 {
+        display: block;
+    }
+
+    .card {
+        width: 70%;
+        height: 90%;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .card {
+        width: 100%;
+        height: 100%;
+        border-radius: unset;
+    }
+
+    .forecast {
+        flex-wrap: wrap;
+        gap: 0.5em;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .day_3, .day_4 {
+        display: none;
+    }
+}

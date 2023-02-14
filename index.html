@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div class="card">
+      <div class="search">
+        <input type="text" class="search-bar" placeholder="Search"/>
+        <i class="fa-solid fa-magnifying-glass btn-search"></i>
+      </div>
+
+      <!-- Current weather -->
+      <div class="current">
+        <h2 class="city">Ho Chi Minh</h2>
+        <div class="temp">
+          <span class="degree">25°</span>
+          <img src="https://cdn.weatherapi.com/weather/64x64/day/113.png" alt="" class="icon">
+        </div>
+        <div class="condition">Cloud</div>
+        <div class="local_time">Updated as of 5:00 PM</div>
+        <div class="sub-info">
+          <span class="feels_like">Feels like: 29.6℃</span>
+          <span class="humidity">Humidity: 60%</span>
+          <span class="wind_speed">Win speed: 6 km/h</span>
+          <span class="visible">Visible: 10 km</span>
+        </div>
+      </div>
+
+      <!-- Forecast weather -->
+      <div class="forecast">
+        <div class="day day_1">
+          <div class="day_name">Monday 1</div>
+          <img src="https://cdn.weatherapi.com/weather/64x64/day/113.png" alt="">
+          <div class="minmax_temp">
+            <span class="max_temp">37°</span>
+            <span class="min_temp">28°</span>
+          </div>
+          <div class="condition">Cloud</div>
+        </div>
+        <div class="day day_2">
+          <div class="day_name">Monday 1</div>
+          <img src="https://cdn.weatherapi.com/weather/64x64/day/113.png" alt="">
+          <div class="minmax_temp">
+            <span class="max_temp">37°</span>
+            <span class="min_temp">28°</span>
+          </div>
+          <div class="condition">Cloud</div>
+        </div>
+        <div class="day day_3">
+          <div class="day_name">Monday 1</div>
+          <img src="https://cdn.weatherapi.com/weather/64x64/day/113.png" alt="">
+          <div class="minmax_temp">
+            <span class="max_temp">37°</span>
+            <span class="min_temp">28°</span>
+          </div>
+          <div class="condition">Cloud</div>
+        </div>
+        <div class="day day_4">
+          <div class="day_name">Monday 1</div>
+          <img src="https://cdn.weatherapi.com/weather/64x64/day/113.png" alt="">
+          <div class="minmax_temp">
+            <span class="max_temp">37°</span>
+            <span class="min_temp">28°</span>
+          </div>
+          <div class="condition">Cloud</div>
+        </div>
+        <div class="day day_5">
+          <div class="day_name">Monday 1</div>
+          <img src="https://cdn.weatherapi.com/weather/64x64/day/113.png" alt="">
+          <div class="minmax_temp">
+            <span class="max_temp">37°</span>
+            <span class="min_temp">28°</span>
+          </div>
+          <div class="condition">Cloud</div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

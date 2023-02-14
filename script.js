@@ -2,7 +2,7 @@
 
 function displayWeather() {
     const inputValue = document.querySelector('.search-bar').value || "Ho Chi Minh"
-    const apiKey = `http://api.weatherapi.com/v1/forecast.json?key=6c80edae591a494285631225230802&q=${inputValue}&days=5&aqi=yes&alerts=no`
+    const apiKey = `https://api.weatherapi.com/v1/forecast.json?key=6c80edae591a494285631225230802&q=${inputValue}&days=5&aqi=yes&alerts=no`
     fetch(apiKey).then(response => response.json())
         .then(data => updateWeather(data))
 }

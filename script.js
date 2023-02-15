@@ -5,9 +5,15 @@ function displayWeather() {
     const apiKey = `https://api.weatherapi.com/v1/forecast.json?key=6c80edae591a494285631225230802&q=${inputValue}&days=5&aqi=yes&alerts=no`
     fetch(apiKey).then(response => response.json())
         .then(data => updateWeather(data))
+        .catch(err => {
+            alert("The region not real")
+            document.querySelector('.search-bar').value = ''
+        })
+
 }
 
 function updateWeather(data) {
+    // console.log(data);
     let locationName = data.location.name
     let temp = Math.floor(data.current.temp_c)
     let icon = data.current.condition.icon

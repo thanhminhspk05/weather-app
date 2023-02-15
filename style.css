@@ -10,13 +10,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    width: 100vw !important;
+    height: 100vh !important;
     background: #ccc;
     font-family: 'Poppins', sans-serif;
     background-image: url('https://source.unsplash.com/1600x900/?landscape');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    overflow: hidden;
 }
 
 .search-bar {
@@ -76,12 +78,12 @@ body {
 .current .sub-info {
     display: flex;
     flex-wrap: wrap;
-    width: 400px;
-    margin: 30px auto;
+    width: 350px;
+    margin: 20px auto;
 }
 
 .current .sub-info span {
-    margin-left: 50px;
+    margin-left: 30px;
 }
 
 .forecast {
@@ -100,8 +102,15 @@ body {
     background-color: #696969;
 }
 
-.forecast .day img {
-    margin: 0 auto;
+.forecast .day_name, 
+.forecast .minmax_temp, 
+.forecast .condition{
+    text-align: center;
+}
+
+.forecast .icon {
+    display: flex;
+    justify-content: center;
 }
 
 .max_temp {
@@ -109,157 +118,47 @@ body {
     margin-right: 5px;
 }
 
-
-@media only screen and (max-width: 800px) {
+/* For tablet */
+@media only screen and (max-width: 912px) {
     .day_5 {
         display: none;
     }
 
-    .forecast .day {
-        width: calc(100%/5);
-    }
-}
-
-@media only screen and (max-width: 750px) {
-    .current .temp img {
-        display: none;
-    }
-
-    .search-bar {
-        width: 80%;
-    }
-}
-
-@media only screen and (max-width: 700px) {
-    .day_4 {
-        display: none;
-    }
-
-    .forecast .day {
-        width: calc(100%/4);
-    }
-}
-
-@media only screen and (max-width: 650px) {
-    .sub-info span {
-        margin-left: 20px !important;
-    }
-}
-
-@media only screen and (max-width: 600px) {
-    .max_temp {
-        font-size: 20px;
-    }
-}
-
-@media only screen and (max-width: 550px) {
-    .card {
-        width: 75%;
-        height: 85%;
-    }
-    .degree {
-        font-size: 50px !important;
-    }
-
-    .city, .current .condition {
-        font-size: 20px !important;
-    }
-
-    .sub-info {
-        width: unset !important;
-    }
-}
-
-@media only screen and (max-width: 500px) {
-    .day_3 {
-        display: none;
-    }
-
-    .forecast .day {
-        width: calc(100%/2);
-    }
-
-    .local_time {
-        display: none;
-    }
-}
-
-@media only screen and (max-width: 450px) {
-    .search-bar {
-        padding: 5px 10px;
-        margin: 15px;
-        font-size: 15px;
-    }
-
-    .current .condition {
-        font-size: 20px !important;
-    }
-
-    .forecast .day {
-        width: calc(100%/2 - 1em) !important;
-        flex-wrap: wrap;
-    }
-
-    .forecast .condition {
-        font-size: 16px !important;
-    }
-
-    .btn-search {
-        font-size: 25px;
-        margin-top: 16px;
-    }
-
-    .city {
-        font-size: 20px !important;
-    }
-
-    .degree {
-        font-size: 60px !important;
-        margin-top: 60px !important;
-    }
-
-    .condition {
-        font-size: 16px !important;
-    }
-
-    .sub-info {
-        margin: 15px auto !important;
-    }
-
     .forecast {
+        display: flex;
         flex-wrap: wrap;
-        gap: 1em;
+        gap: 1.5rem;
     }
 
-    .day_3 {
-        display: block;
-    }
-
-    .day_4 {
-        display: block;
-    }
-
-    .card {
-        width: 70%;
-        height: 90%;
+    .forecast .day {
+        width: calc(100%/2.5);
     }
 }
 
-@media only screen and (max-width: 375px) {
+/* For mobile */
+@media only screen and (max-width: 560px) {
     .card {
         width: 100%;
         height: 100%;
-        border-radius: unset;
-    }
-
-    .forecast {
-        flex-wrap: wrap;
-        gap: 0.5em;
+        border-radius: 5px;
     }
 }
 
-@media only screen and (max-width: 300px) {
+@media only screen and ((max-width: 560px) and (max-height:750px)) {
     .day_3, .day_4 {
         display: none;
     }
 }
+
+@media only screen and (max-width: 375px) {
+    .day_3, .day_4 {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 280px) {
+    .sub-info {
+        display: none !important;
+    }
+}
+
